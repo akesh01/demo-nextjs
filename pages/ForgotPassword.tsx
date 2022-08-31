@@ -25,7 +25,7 @@ const ForgotPassword = () => {
         <button  style={{backgroundColor:"#F5F5F5",color:"black",border:"none"}}className={styles.backButton} onClick={handleBack}><AiOutlineLeft/>Back</button>
 
         <h1 className={styles.passwordtitle}>Forgot your password</h1>
-        <p className={styles.message}>Enter your email address and we'll send you an email with all the instructions</p>
+        <p className={styles.message}>Enter your email address and we&apos;ll send you an email with all the instructions</p>
         <div className={styles.formInput}>
           <div className={styles.emailInput}>
           <p className={styles.EmailTitle}>Email</p>

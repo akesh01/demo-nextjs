@@ -17,13 +17,18 @@ const NewPassword = () => {
 
 
   const handleSubmit= (e:any)=> {
-    e.defaultPrevent() ;
-    if(firstpassword == secondpassword) {
+    e.preventDefault();
+       
+    if(firstpassword === secondpassword) {
       // resetpassword
+      console.log("Submitted");
+      
         router.push('/PasswordReset')
     }
     else {
       alert("passwords are not matching");
+      console.log("error");
+      
     }
 
   }
@@ -33,7 +38,7 @@ const NewPassword = () => {
       <div className={styles.container}>
         <p className={styles.ResetTitle}><strong>Set new password</strong></p>
         <p>Your new password must be different from  <br></br>previous used passwords</p>
-        <form action="" onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
         <div className={styles.loginform}>
         <p>Password</p>
         <Input className={styles.textfield} 
@@ -69,7 +74,7 @@ const NewPassword = () => {
        
         
         
-      <button type='submit' className={styles.btn_continue}>Reset Passord</button>
+      <button type='submit' onClick={handleSubmit} className={styles.btn_continue}>Reset Password</button>
       </form>
       <p className={styles.cancel}>Cancel</p>
         </div> 

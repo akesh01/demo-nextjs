@@ -87,7 +87,7 @@ const EmployeeItemsList = () => {
       </thead>
       <tbody>
         {currentPageData.map((user, index): any => (
-          <tr>
+          <tr key={index}>
             <td>
               <CheckBoxOutlineBlankIcon style={{ marginLeft: "5px" }} />
             </td>

@@ -16,7 +16,7 @@ const CheckEmail = () => {
       <p className={styles.emailTitle}><strong>Check your email</strong></p>
       <p>We sent a password reset link to<br></br> <strong>bingwen@hotmail.com</strong></p>
       <p></p>
-      <p>Didn't receive the email? <Link href='/ForgotPassword'><a>Click to resend</a></Link></p>
+      <p>Didn&apos;t receive the email? <Link href='/ForgotPassword'><a>Click to resend</a></Link></p>
     </div> 
     </div>
 
