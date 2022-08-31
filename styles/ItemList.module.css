@@ -1,0 +1,60 @@
+.container {
+    position: absolute;
+    width: 1339px;
+    height: 46px;
+    left: 81px;
+    top: 176px;
+
+/* cool-gray/100 */
+
+    background: #F3F4F6;
+    border-radius: 0px;
+    gap:80px ;
+    display: flex;
+    align-items: stretch;
+    align-content: space-between;
+    font-family: "Inter";
+}
+
+
+
+
+.container thead {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.container td {
+    padding: 5px;
+    height: 70px;
+    color: #111928;
+}
+
+
+.container tbody td:nth-child(6) div {
+    border-radius: 8px;
+    border: solid 1px #262626;
+    padding: 1px 11px;
+    width: 69px;
+    height: 24px;
+}
+
+
+.container tbody td span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+   
+    background-repeat: no-repeat;
+    transform: translateY(35%);
+}
+.Icon {
+    cursor: pointer;
+    
+}
+
+.adminroles {
+    background-color: white;
+    color:black;
+    border-radius:5px;
+}

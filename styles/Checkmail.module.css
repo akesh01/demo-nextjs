@@ -1,0 +1,19 @@
+.container {
+    position: absolute;
+    width: 451px;
+    height: 159px;
+    left: 495px;
+    top: 196px;
+}
+
+.emailTitle{
+    font-size: 38px ;
+    margin: 0;
+}
+
+.backButton{
+    position: absolute;
+    color: white;
+    left: 88px;
+    top: 58px;
+}

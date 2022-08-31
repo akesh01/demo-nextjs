@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 1250px;
+    height: 76px;
+    background-color: #FFFFFF;
+    padding-left: 30px;
+}
+
+.paginationLeftBtn a{
+    color: #111928;
+}
+.paginationRightBtn a {
+    color: #111928;
+    padding-left: 10.8px;
+}
+
+.paginationText {
+    color : #6B7280;
+    width: 250px;
+    height: 21px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    flex: none;
+    order: 2;
+    flex-grow : 0;
+    position: absolute;
+    left: 10%;
+    letter-spacing: 1px;
+}
+.paginationTextNumbers {
+    color: #111928;
+    font-weight: 900;
+}
