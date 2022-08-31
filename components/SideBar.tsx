@@ -1,10 +1,10 @@
-// import styles from '../styles/SideBar.module.css' 
+
 import PeopleIcon from "@mui/icons-material/People";
 import DescriptionIcon from "@mui/icons-material/Description";
 import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import React, { useState } from "react";
-import styles from "../styles/Sidebar.module.css";
+import styles from "../styles/SideBar.module.css";
 import healthimage from "../assets/healthimage.png"
 import healthplus from "../assets/healthplus.png";
 import Image from "next/image";
