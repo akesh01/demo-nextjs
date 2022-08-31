@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styles from '../../styles/ItemList.module.css' 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
-import records from '../../projectType.json';
+import records from '../../ProjectType.json';
 import PaginationElement from '../PaginationElement';
 const ProjectTypeList = () => {
  
