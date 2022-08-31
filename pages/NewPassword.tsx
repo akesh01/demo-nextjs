@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../styles/NewPassword.module.css'
+import styles from '../styles/NewPassWord.module.css'
 import {AiOutlineLeft} from 'react-icons/ai'
 import { IconButton, Input, InputAdornment } from '@mui/material'
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
