@@ -5,9 +5,9 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import records from '../../ProjectType.json';
 import PaginationElement from '../PaginationElement';
-const EmployeeTypeList = () => {
+const EmployeeTypeList = ({ isopen, setisopen }: any) => {
  
-  const [isopen, setisopen] = useState(false);
+
   const [tableData, setTableData] = useState<Array<any>>(records);
   const [currentPageData,setCurrentPageData] = useState<Array<any>>([]);
   const [currentPage,setCurrentPage] = useState(1);

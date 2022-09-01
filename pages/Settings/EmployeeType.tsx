@@ -11,7 +11,7 @@ import styles from '../../styles/Adminusers.module.css'
 
 const EmployeeType = () => {
   const [currenPageNo,setCurrentPageNo] = useState(1);
-  const [isopen, setisopen] = useState(false);
+  const [isopen, setisopen] = useState<boolean>(false);
   return (
     <>
       <Topbar/>
