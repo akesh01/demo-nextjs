@@ -5,9 +5,9 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import records from '../records.json'
 import PaginationElement from './PaginationElement';
-const ItemsList = () => {
+const ItemsList = ({ isopen, setisopen }: any) => {
  
-  const [isopen, setisopen] = useState(false);
+ 
   const [tableData, setTableData] = useState<Array<any>>(records);
   const [currentPageData,setCurrentPageData] = useState<Array<any>>([]);
   const [currentPage,setCurrentPage] = useState(1);
@@ -21,7 +21,6 @@ const ItemsList = () => {
         currentPage* no_of_pages)
     ])
   },[currentPage]) ;
-
 
 
   const handlePaginationLeft = ()=> {
@@ -55,7 +54,7 @@ const ItemsList = () => {
         marginLeft: isopen ? "14rem" : "7rem",
         transition: "0.5s",
         width: isopen ? "85%" : "90%",
-      }}
+      }} 
       className={styles.table}
     >
       <thead style={{ backgroundColor: "#F3F4F6", height: "46px" }}>

@@ -1,6 +1,6 @@
 import { List } from '@mui/material';
 import Head from 'next/head';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AddUserModal from '../../components/AddUserModal';
 import ItemsList from '../../components/ItemsList';
 import SearchBar from '../../components/SearchBar';
@@ -16,6 +16,9 @@ const AdminUsers = () => {
         setCurrentPageNo(e.target.value);
   }
 
+ useEffect(()=> {
+      
+ },[isopen])
  
   return (
     <>
@@ -25,7 +28,7 @@ const AdminUsers = () => {
         <SideBar isopen={isopen} setisopen={setisopen}/>
        </div>
       <div>
-        <ItemsList />
+        <ItemsList isopen={isopen} setisopen={setisopen}/>
       </div> 
     <AddUserModal openModal= {openAddModal} setOpenModal ={setOpenAddModal}/>
     </>
