@@ -1,0 +1,56 @@
+.topBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    
+    background: #ffffff;
+
+}
+
+.topBarRight {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 0px 0px 16px;
+    gap: 12px;
+    width: 100%;
+    height: 32px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+  
+}
+
+.BellIcon  {
+    align-items: flex-end;
+    display: flex;
+    height: 19.200000762939453px;
+    width: 16.799488067626953px;
+    left: 3.6002197265625px;
+    top: 2.39990234375px;
+    border-radius: 0px;
+
+/* cool-gray/900 */
+
+
+
+}
+
+.avatar {
+    height: 32px;
+    width: 32px;
+    left: 1368px;
+    top: 0px;
+    border-radius: 16px;
+
+}
+

@@ -1,0 +1,98 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0px;
+
+    position: absolute;
+    width: 1490px;
+    height: 91px;
+    left: 61px;
+    top: 65px;
+    margin-right: 24px;
+    
+/* white */
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
+}
+
+.header {
+    width: 204px;
+    height: 27px;
+    
+    /* text-lg/font-semibold */
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    
+    
+    /* cool-gray/900 */
+    
+    color: #111928;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.inputSearch  {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 13px 20px;
+    
+    width: 562.58px;
+    height: 50px;
+    
+    /* cool-gray/50 */
+    
+    background: #F9FAFB;
+    /* cool-gray/200 */
+    
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    color: black;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.addUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 13px;
+    gap: 8px;
+    font-size: 14px;
+    width: 124px;
+    height: 39px;
+    left: 556.5px;
+    /* Style */
+    
+    background: #262626;
+    border-radius: 12px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

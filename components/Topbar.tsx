@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import avatar from '../assets/Avatar.png'
 import BellIcon from '../assets/VectorIconBell.png'
-import styles from '../styles/AdminUsers.module.css'
+import styles from '../styles/Topbar.module.css'
 
 const Topbar = () => {
   return (
