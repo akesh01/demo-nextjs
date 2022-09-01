@@ -25,17 +25,6 @@ const Project = () => {
       <div>
         <ProjectItemsList isopen={isopen} setisopen={setisopen}/>
       </div>  
-      <br></br>
-      <TablePagination 
-      className={styles.pagination}
-      sx= {{alignItems:"center",display:"flex",top:950}}
-      component="div"
-      count={100}
-      page={currenPageNo}
-      onPageChange={handlePageChange}
-      rowsPerPage={no_of_pages}
-    /> 
-
     <div>
       
     </div>
