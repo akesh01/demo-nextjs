@@ -14,6 +14,7 @@ const Project = () => {
   const handlePageChange = (e:any)=> {
         setCurrentPageNo(e.target.value);
   }
+  
   return (
     <>
       <Topbar/>
