@@ -1,15 +1,15 @@
 
 
-import { List, TablePagination } from '@mui/material';
+import { List } from '@mui/material';
 import Head from 'next/head';
 import React, { useState } from 'react'
-import SearchBar from '../../../components/SearchBar';
-import ProjectTypeList from '../../../components/Settings/ProjectTypeList';
-import SideBar from '../../../components/SideBar';
-import Topbar from '../../../components/Topbar';
-import styles from '../../../styles/Adminusers.module.css'
+import SearchBar from '../../components/SearchBar';
+import SkillsList from '../../components/Settings/SkillsList';
+import SideBar from '../../components/SideBar';
+import Topbar from '../../components/Topbar';
+import styles from '../../styles/Adminusers.module.css'
 
-const ProjectType = () => {
+const Skills = () => {
   const [currenPageNo,setCurrentPageNo] = useState(1);
   const [isopen, setisopen] = useState(false);
   const no_of_pages = 15 ;
@@ -19,16 +19,14 @@ const ProjectType = () => {
   return (
     <>
       <Topbar/>
-
       <SearchBar title="Project Type" btn="Add Project Type"/>
       <div className={styles.sidebar}>
         <SideBar isopen={isopen} setisopen={setisopen}/>
        </div>
       <div>
-        <ProjectTypeList/>
+        <SkillsList isopen={isopen} setisopen={setisopen}/>
       </div>  
-     
-
+    
     <div>
       
     </div>
@@ -36,4 +34,4 @@ const ProjectType = () => {
   )
 }
 
-export default ProjectType ;
+export default Skills ;

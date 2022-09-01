@@ -3,11 +3,11 @@
 import { List, TablePagination } from '@mui/material';
 import Head from 'next/head';
 import React, { useState } from 'react'
-import SearchBar from '../../../components/SearchBar';
-import EmployeeTypeList from '../../../components/Settings/EmployeeTypeList';
-import SideBar from '../../../components/SideBar';
-import Topbar from '../../../components/Topbar';
-import styles from '../../../styles/Adminusers.module.css'
+import SearchBar from '../../components/SearchBar';
+import EmployeeTypeList from '../../components/Settings/EmployeeTypeList';
+import SideBar from '../../components/SideBar';
+import Topbar from '../../components/Topbar';
+import styles from '../../styles/Adminusers.module.css'
 
 const EmployeeType = () => {
   const [currenPageNo,setCurrentPageNo] = useState(1);
@@ -21,7 +21,7 @@ const EmployeeType = () => {
         <SideBar isopen={isopen} setisopen={setisopen}/>
        </div>
       <div>
-        <EmployeeTypeList/>
+        <EmployeeTypeList isopen={isopen} setisopen={setisopen}/>
       </div>  
      
     <div>

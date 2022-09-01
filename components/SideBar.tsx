@@ -51,7 +51,8 @@ function Sidebar({ isopen, setisopen }: any) {
       className={styles.sidebar}
     >
       {isopen == true && (
-        <Image className={styles.healthsymbol} src={healthimage} />
+       
+          <Image className={styles.healthsymbol} src={healthplus} />
       )}
       {isopen == false && (
         <Image className={styles.healthplus} src={healthplus} />
