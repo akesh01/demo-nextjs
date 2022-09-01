@@ -23,7 +23,7 @@ const Employees = () => {
         <SideBar isopen={isopen} setisopen={setisopen}/>
        </div>
       <div>
-        <EmployeeItemsList/>
+        <EmployeeItemsList  isopen={isopen} setisopen={setisopen}/>
       </div>  
       
     <div>

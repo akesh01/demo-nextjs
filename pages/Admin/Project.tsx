@@ -23,7 +23,7 @@ const Project = () => {
         <SideBar isopen={isopen} setisopen={setisopen}/>
        </div>
       <div>
-        <ProjectItemsList/>
+        <ProjectItemsList isopen={isopen} setisopen={setisopen}/>
       </div>  
       <br></br>
       <TablePagination 
