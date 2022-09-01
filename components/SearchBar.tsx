@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../styles/AdminUsers.module.css'
+import styles from '../styles/Searchbar.module.css'
 import AddUserModal from './AddUserModal';
 const SearchBar = (props:any) => {
   const [searchword,setSearchWord] = useState("")
