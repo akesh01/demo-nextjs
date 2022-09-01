@@ -7,7 +7,7 @@ import records from '../../projects.json';
 import PaginationElement from '../PaginationElement';
 const ProjectItemsList = ({ isopen, setisopen }: any) => {
  
-  
+
   const [tableData, setTableData] = useState<Array<any>>(records);
   const [currentPageData,setCurrentPageData] = useState<Array<any>>([]);
   const [currentPage,setCurrentPage] = useState(1);
