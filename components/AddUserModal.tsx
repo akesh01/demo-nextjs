@@ -7,6 +7,11 @@ interface UserModalProps {
     setOpenModal :any
 }
 const AddUserModal = ({openModal,setOpenModal} :UserModalProps) => {
+
+  const handleBack = ()=> {
+          setOpenModal(!openModal);
+  }
+
  return (
     <>
     {openModal?
@@ -22,24 +27,24 @@ const AddUserModal = ({openModal,setOpenModal} :UserModalProps) => {
                <form action="">
                 <div>
                   <p>Name</p>
-                  <input style={{background:"#ffffff",color:"black"}} type="text" name="" id="" />
+                  <input style={{background:"#ffffff",color:"black"}}  type="text" name="" id="" />
                 </div>
                 <div>
                   <p>Email</p>
-                  <input style={{background:"#ffffff",color:"black"}} type="text" name="" id="" />
+                  <input style={{background:"#ffffff",color:"black"}}   type="text" name="" id="" />
                 </div>
                 <div style={{display:"flex",flexDirection:"row",alignContent:"space-around",alignItems:"center"}}>
                   <div>
                   <p>Phone Number</p>
-                  <input style={{background:"#ffffff",color:"black",marginRight:"250px"}} type="text" name="" id="" />
+                  <input style={{background:"#ffffff",color:"black",marginRight:"250px"}}   type="text" name="" id="" />
                   </div>
                   <div>
                   <p>Role</p>
-                  <input style={{background:"#ffffff",color:"black"}} type="text" name="" id="" />
+                  <input style={{background:"#ffffff",color:"black"}}    type="text" name="" id="" />
                   </div>
                 </div>
                 <div>
-                    <button>+ Add Another</button>
+                    <button style={{background:"white",color:"black",border:"1px solid black"}}>+ Add Another</button>
                   </div>
 
                </form>
@@ -47,10 +52,10 @@ const AddUserModal = ({openModal,setOpenModal} :UserModalProps) => {
 
               <div className={styles.modalfooter}>
                 <div style={{padding:"50px"}}>
-                  <button>Cancel</button>
+                  <button style={{background:"white",color:"black",border:"1px solid black"}} onClick={handleBack}>Cancel</button>
                 </div>
                 <div>
-                  <button>Invite User</button>
+                  <button style={{background:"white",color:"black",border:"1px solid black"}}>Invite User</button>
                 </div>
               </div>
             </div>
@@ -63,7 +68,6 @@ const AddUserModal = ({openModal,setOpenModal} :UserModalProps) => {
     }
     </>
   ) 
-
 
 }
 

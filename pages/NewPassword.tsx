@@ -32,9 +32,13 @@ const NewPassword = () => {
     }
 
   }
+
+const handleBack = ()=> {
+      router.push("/");
+}
   return (
     <div>
-        <button  style={{backgroundColor:"#F5F5F5",color:"black",border:"none"}} className={styles.backButton}><AiOutlineLeft/>Back</button>
+        <button onClick={handleBack}  style={{backgroundColor:"#F5F5F5",color:"black",border:"none"}} className={styles.backButton}><AiOutlineLeft/>Back</button>
       <div className={styles.container}>
         <p className={styles.ResetTitle}><strong>Set new password</strong></p>
         <p>Your new password must be different from  <br></br>previous used passwords</p>
@@ -76,7 +80,7 @@ const NewPassword = () => {
         
       <button type='submit' onClick={handleSubmit} className={styles.btn_continue}>Reset Password</button>
       </form>
-      <p className={styles.cancel}>Cancel</p>
+      <p   onClick={handleBack} style={{cursor:"pointer"}} className={styles.cancel}>Cancel</p>
         </div> 
     </div>
   )

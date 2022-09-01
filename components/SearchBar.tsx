@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/Searchbar.module.css'
 import AddUserModal from './AddUserModal';
 const SearchBar = (props:any) => {
@@ -10,6 +10,10 @@ const SearchBar = (props:any) => {
            setOpenAddModal(!openAddModal);
            
   }
+
+  useEffect (()=> {
+
+  },[openAddModal])
   return (
     <>
     <div className={styles.container}>
@@ -23,7 +27,9 @@ const SearchBar = (props:any) => {
         <button onClick={OpenModalhandle}  className={styles.addbutton} style={{backgroundColor:"#262626",border:"none",width:"120px",textAlign:"center",cursor:"pointer"}}> + {props.btn}</button>
       </div>
     </div>
-      <AddUserModal openModal= {openAddModal} setOpenModal ={setOpenAddModal}/>
+
+    <AddUserModal openModal= {openAddModal} setOpenModal ={setOpenAddModal}/> 
+    
      </>
   )
 }
