@@ -87,8 +87,7 @@ const ProjectTypeList = ({ isopen, setisopen }: any) => {
           </th>
           <th style={{ width: "55px", padding: "20px" }} scope="col">
             Options
-            <span><HiArrowUp/></span>
-            <span><HiArrowDown/></span>
+           
           </th>
         </tr>
       </thead>
