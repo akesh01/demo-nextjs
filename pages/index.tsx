@@ -1,5 +1,5 @@
 import { Button, IconButton, Input, InputAdornment, TextField } from '@mui/material';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/Login.module.css' 
 import Link from 'next/link' ;
 import healthimage from "../assets/healthimage.png"
@@ -8,42 +8,51 @@ import  { useRouter } from 'next/router';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Visibility from '@mui/icons-material/Visibility';
 import Image from 'next/image';
+import axios from 'axios';
 
 
 const Login = () => {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
+  const [wrongLogin,setWrongLogin] = useState(false);
   const router = useRouter();
-  const handleSubmit =(e:any)=> {
+
+  async function handleSubmit (e:any) {
     e.preventDefault();
     console.log("clicked");
     // post username and password to api
     const formData = {
-      Email : email,
-      Password : password,
+      "user" : {
+      email : email,
+      password : password,
+      }
     }
-    console.log(formData);
+   // console.log(formData);
     
-    fetch('/api/hello', {
-      method :"POST" ,
-     
-      body : JSON.stringify(formData),
-    })
-    .then((respone)=> respone.json() )
+     await axios.post('https://floating-falls-55336.herokuapp.com/users/sign_in', formData)
+    .then((response)=> {
+      const res = response ;
+     console.log( res.data,res.headers);
+      
+     } )
     .then((data) => {
-      console.log("Logged In Succesfully:",data);
+     // console.log("Logged In Succesfully:",data);
+     
+      setEmail('');
+      setPassword('');
       router.push('Admin/AdminUsers');
-
     })
     .catch((error) => {
+      setWrongLogin(true);
       console.error("Error:",error); 
     })
 
-
-    setEmail('');
-    setPassword('');
   } 
+
+  useEffect(()=> {
+
+  },[password,email,wrongLogin])
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
@@ -63,6 +72,20 @@ const Login = () => {
   return (
     <div>
       <main className={styles.container}>
+     {wrongLogin? <div
+        style={{ opacity: wrongLogin ? "1" : "0" }}
+        className={styles.errorBox}
+      >
+        <div className={styles.errorLine}></div>
+        <div className={styles.errorImage} onClick={()=> setWrongLogin(!wrongLogin)}></div>
+        <div className={styles.errorText}>
+          The password or username  is not correct. Try again or request a new password if
+          you forgot.
+        </div>
+        <div className={styles.errorClose} onClick={()=> setWrongLogin(!wrongLogin)}></div>
+      </div>
+      : <div></div>
+}
         <div  className={styles.card}>
         <div className={styles.image}>
         <Image  src={healthplus} width="36px" height="36px"/>
@@ -77,7 +100,7 @@ const Login = () => {
          <div className={styles.loginform}>
 
         <p>Email</p>
-        <Input  className={styles.textfield}  type="email"  endAdornment={
+        <Input  className={styles.textfield}  type="email" value={email}  endAdornment={
                 <InputAdornment position="end">
                   <IconButton
                   >
@@ -89,7 +112,8 @@ const Login = () => {
           </div>
           <Input  style = {{color:(password.length >7)?"black":"red"}} className={styles.textfield} 
               onChange={(e) => {setPassword(e.target.value)}}
-              type={passwordShown?"text":"password"}   
+              type={passwordShown?"text":"password"}  
+              value={password} 
               endAdornment={
                 <InputAdornment position="end">
                   <IconButton 

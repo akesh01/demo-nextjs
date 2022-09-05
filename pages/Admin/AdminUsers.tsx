@@ -21,7 +21,7 @@ const AdminUsers = () => {
  },[isopen])
  
   return (
-    <>
+    <div style={{backgroundColor:"#FFFFFF"}}>
       <Topbar/>
       <SearchBar title="Admin Users" btn="Add Users" openModal= {openAddModal} setOpenModal ={setOpenAddModal}/>
       <div className={styles.sidebar}>
@@ -30,8 +30,8 @@ const AdminUsers = () => {
       <div>
         <ItemsList isopen={isopen} setisopen={setisopen}/>
       </div> 
-    <AddUserModal openModal= {openAddModal} setOpenModal ={setOpenAddModal}/>
-    </>
+    
+    </div>
   )
 }
 

@@ -9,7 +9,10 @@
         left: 0px;
         top: 0px;
         background: url(../assets/background_logo.jpg) ;
-       background: cover !important;
+       background-position: cover ;
+       background-size: cover;
+       background-repeat: no-repeat;
+    
 }
 .title {
     position: absolute;
@@ -32,7 +35,8 @@
     left: 833px;
     top: 187px;
     background-color: #F5F5F5 ;
-    transform: rotate(90);
+   
+    
 }
 
 
@@ -102,3 +106,72 @@
     letter-spacing:.1px;
 }
 
+
+.errorBox {
+    overflow: hidden;
+    position: absolute;
+    width: 440px;
+    height: 100px;
+    left: 838px;
+    top: 20px;
+    background: #ffffff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.errorLine {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    /* left: 838px; */
+    /* top: 15px; */
+    /* Red */
+    background: #eb5757;
+    overflow: hidden;
+}
+
+.errorImage {
+    position: absolute;
+    left: 8.33%;
+    right: 8.33%;
+    top: 30%;
+    bottom: 8.33%;
+    /* Red */
+    /* background: #EB5757; */
+    background: url(../assets/errorImage.png);
+    /* width: 33.33333206176758px; */
+    /* left: 5.333251953125px; */
+    /* top: 3.3333740234375px; */
+    border-radius: 0px;
+    background-repeat: no-repeat;
+}
+
+.errorText {
+    position: absolute;
+    width: 315px;
+    height: 44px;
+    left: 100px;
+    top: 28px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    display: flex;
+    align-items: center;
+    color: #eb5757;
+}
+
+.errorClose {
+    position: absolute;
+    color: #212121;
+    height: 13px;
+    width: 13px;
+    right: 10px;
+    top: 10px;
+    background: url(../assets/close-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -24,7 +24,18 @@ const SearchBar = (props:any) => {
         <input type="search" className={styles.inputSearch}   placeholder='Search' value={searchword}  onChange={(e:any)=> setSearchWord(e.target.value) }/>
       </div>
       <div className={styles.addUser}>
-        <button onClick={OpenModalhandle}  className={styles.addbutton} style={{backgroundColor:"#262626",border:"none",width:"120px",textAlign:"center",cursor:"pointer"}}> + {props.btn}</button>
+        <button onClick={OpenModalhandle}  className={styles.addbutton} style={{backgroundColor:"#262626",border:"none",
+            width:"185px",
+            height:"39px",
+            textAlign:"center",
+            cursor:"pointer",
+            fontFamily: 'Inter',
+            fontStyle: "normal",
+            fontWeight: "600",
+            fontSize: "14px",
+            lineHeight: "150%",
+            color: "#FFFFFF"}}>
+               + {props.btn}</button>
       </div>
     </div>
 

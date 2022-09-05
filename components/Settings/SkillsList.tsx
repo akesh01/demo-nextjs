@@ -5,6 +5,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import records from '../../ProjectType.json';
 import PaginationElement from '../PaginationElement';
+import {HiArrowDown, HiArrowUp} from 'react-icons/hi';
 const SkillsList = ({ isopen, setisopen }: any) => {
  
   const [tableData, setTableData] = useState<Array<any>>(records);
@@ -44,7 +45,7 @@ const SkillsList = ({ isopen, setisopen }: any) => {
   }
   
   return (
-    <div style={{ marginTop: "150px", marginRight: "100px" }}>
+    <div style={{ marginTop: "150px", marginRight: "100px",backgroundColor:"#FFFFFF"}}>
     <table
       style={{
         marginLeft: isopen ? "14rem" : "7rem",
@@ -56,22 +57,33 @@ const SkillsList = ({ isopen, setisopen }: any) => {
       <thead style={{ backgroundColor: "#F3F4F6", height: "46px" }}>
         <tr
           style={{
-            color: "black",
+            color: "#4B5563",
             display: "table-row",
-            paddingLeft: "20px",
+            paddingLeft: "20px", 
+            fontFamily: "Inter",
+            fontStyle: "normal",
+            fontWeight: "600",
+            fontSize: "14px",
+            lineHeight: "150%",
           }}
         >
-          <th style={{ width: "14px" }}>
+          <th style={{ width: "14px", color:" #9CA3AF" }}>
             <CheckBoxOutlineBlankIcon />
           </th>
           <th style={{ width: "120px", padding: "20px" }} scope="col">
           Name
+          <span><HiArrowUp/></span>
+          <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "90px", padding: "20px" }} scope="col">
             description
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
-          <th style={{ width: "200px", padding: "20px" }} scope="col">
+          <th style={{ width: "100px", padding: "20px" }} scope="col">
             Status
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "55px", padding: "20px" }} scope="col">
             Options
@@ -81,6 +93,12 @@ const SkillsList = ({ isopen, setisopen }: any) => {
       <tbody
       style={{
         backgroundColor:"#FFFFFF",
+        color:"#111928",
+        fontFamily: "Inter",
+        fontStyle: "normal",
+        fontWeight: "500",
+        fontSize: "16px",
+        lineHeight: "150%",
       }}>
         {tableData.map((user, index): any => (
           <tr key={index}>

@@ -5,6 +5,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import records from '../../projects.json';
 import PaginationElement from '../PaginationElement';
+import {HiArrowDown, HiArrowUp} from 'react-icons/hi';
 const ProjectItemsList = ({ isopen, setisopen }: any) => {
  
 
@@ -45,46 +46,78 @@ const ProjectItemsList = ({ isopen, setisopen }: any) => {
   }
   
   return (
-    <div style={{ marginTop: "150px", marginRight: "100px" }}>
+    <div style={{ marginTop: "150px", marginRight: "100px" ,backgroundColor:"#FFFFFF"}}>
     <table
       style={{
         marginLeft: isopen ? "14rem" : "7rem",
         transition: "0.5s",
-        width: isopen ? "85%" : "90%",
+        width: isopen ? "95%" : "1500px",
+        display: "block",
+        overflowX: "scroll",
+        whiteSpace: "nowrap",
       }}
       className={styles.table}
     >
       <thead style={{ backgroundColor: "#F3F4F6", height: "46px" }}>
         <tr
           style={{
-            color: "black",
+            color: "#4B5563",
             display: "table-row",
-            paddingLeft: "20px",
+            paddingLeft: "20px", 
+            fontFamily: "Inter",
+            fontStyle: "normal",
+            fontWeight: "600",
+            fontSize: "14px",
+            lineHeight: "150%",
           }}
         >
-          <th style={{ width: "14px" }}>
-            <CheckBoxOutlineBlankIcon />
+          <th style={{ width: "14px",color:" #9CA3AF" }}>
+            <CheckBoxOutlineBlankIcon  style={{ marginLeft: "5px",color: "#9CA3AF" }}/>
           </th>
           <th style={{ width: "120px", padding: "20px" }} scope="col">
             Project ID
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "90px", padding: "20px" }} scope="col">
             Name
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "200px", padding: "20px" }} scope="col">
             Client
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "140px", padding: "20px" }} scope="col">
             Project Type
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "150px", padding: "20px" }} scope="col">
             Project Responsible
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "105px", padding: "20px" }} scope="col">
             start Date
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "105px", padding: "20px" }} scope="col">
             End Date
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
+          </th>
+          <th style={{ width: "105px", padding: "20px" }} scope="col">
+            Project Status
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
+          </th>
+          <th style={{ width: "105px", padding: "20px" }} scope="col">
+            Monthly Status
+            <span><HiArrowUp/></span>
+            <span><HiArrowDown/></span>
           </th>
           <th style={{ width: "55px", padding: "20px" }} scope="col">
             Options
@@ -94,11 +127,19 @@ const ProjectItemsList = ({ isopen, setisopen }: any) => {
       <tbody 
       style={{
         backgroundColor:"#FFFFFF",
+        color:"#111928",
+        fontFamily: "Inter",
+        fontStyle: "normal",
+        fontWeight: "500",
+        fontSize: "16px",
+        lineHeight: "150%",
+        
+        
       }}>
         {currentPageData.map((user, index): any => (
           <tr key={index}>
             <td>
-              <CheckBoxOutlineBlankIcon style={{ marginLeft: "5px" }} />
+              <CheckBoxOutlineBlankIcon style={{ marginLeft: "5px",color: "#9CA3AF" }} />
             </td>
             <td style={{ paddingLeft: "40px" }}>{user.ProjectID}</td>
             <td style={{ paddingLeft: "40px" }}>{user.Name}</td>
@@ -107,6 +148,8 @@ const ProjectItemsList = ({ isopen, setisopen }: any) => {
             <td style={{ paddingLeft: "70px" }}> {user.PResponsible}</td> 
             <td style={{ paddingLeft: "30px" }}> {user.start_date}</td> 
             <td style={{ paddingLeft: "30px" }}> {user.end_date}</td> 
+            <td></td>
+            <td></td>
             <td>
               <MoreVertIcon style={{ marginLeft: "50px" }} />
             </td>

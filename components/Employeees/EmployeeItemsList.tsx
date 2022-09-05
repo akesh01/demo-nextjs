@@ -45,7 +45,7 @@ const EmployeeItemsList = ({ isopen, setisopen }: any) => {
 }
 
   return (
-    <div style={{ marginTop: "150px", marginRight: "100px" }}>
+    <div style={{ marginTop: "150px", marginRight: "100px",backgroundColor:"#FFFFFF"}}>
     <table
       style={{
         marginLeft: isopen ? "14rem" : "7rem",
@@ -62,7 +62,7 @@ const EmployeeItemsList = ({ isopen, setisopen }: any) => {
             paddingLeft: "20px",
           }}
         >
-          <th style={{ width: "14px" }}>
+          <th style={{ width: "14px",color:" #9CA3AF" }}>
             <CheckBoxOutlineBlankIcon />
           </th>
           <th style={{ width: "120px", padding: "20px" }} scope="col">
@@ -85,7 +85,15 @@ const EmployeeItemsList = ({ isopen, setisopen }: any) => {
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style={{
+         backgroundColor:"#FFFFFF",
+         color:"#111928",
+         fontFamily: "Inter",
+         fontStyle: "normal",
+         fontWeight: "500",
+         fontSize: "16px",
+         lineHeight: "150%",
+      }}>
         {currentPageData.map((user, index): any => (
           <tr key={index}>
             <td>
